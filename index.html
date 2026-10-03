@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pop Duo — Balloon & Backdrop Rental</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+<style>
+:root{--milk:#fffaf5;--blush:#ead4cf;--rose:#b9837e;--plum:#674c58;--ink:#493a3d;--butter:#f3e6bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--milk);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}.serif,h1,h2{font-family:Italiana,serif;font-weight:400}
+nav{position:absolute;z-index:5;left:0;right:0;padding:28px 6vw;display:flex;justify-content:space-between;align-items:center}
+.brand{font:32px Italiana,serif}.brand i{color:var(--rose);font-style:normal}.links{display:flex;gap:25px;align-items:center;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.pill{border:1px solid currentColor;border-radius:99px;padding:12px 20px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:120px 7vw 70px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#f2d8d8 0 12%,transparent 34%),radial-gradient(circle at 90% 75%,#efe0b7 0 8%,transparent 30%),linear-gradient(135deg,#fffaf5,#f7e9e6)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.65}
+.hero:before{width:420px;height:420px;background:#e5c3c5;left:-170px;bottom:-120px}.hero:after{width:330px;height:330px;background:#efe2bd;right:-100px;top:80px}
+.hero-inner{position:relative;z-index:2;max-width:980px}.kicker{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:var(--rose)}
+h1{font-size:clamp(62px,10vw,135px);line-height:.86;margin:24px 0}.script{font-style:italic;color:var(--rose)}
+.hero p{max-width:570px;margin:30px auto;font-size:16px;line-height:1.8}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--ink);color:white;border-radius:99px;padding:15px 24px;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.float{position:absolute;border:1px solid rgba(73,58,61,.25);border-radius:50%;background:rgba(255,255,255,.25);backdrop-filter:blur(5px)}
+.f1{width:90px;height:110px;left:13%;top:22%}.f2{width:58px;height:70px;right:15%;bottom:22%}.f3{width:42px;height:50px;right:24%;top:23%}
+section{padding:110px 7vw}.intro{text-align:center;max-width:900px;margin:auto}.intro h2{font-size:clamp(45px,6vw,82px);line-height:1.05;margin:15px 0 25px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}.card{min-height:430px;border-radius:180px 180px 24px 24px;overflow:hidden;position:relative;background:var(--blush);display:flex;align-items:flex-end;padding:28px}
+.card:nth-child(2){background:var(--butter)}.card:nth-child(3){background:#d9c8d0}.card:before{content:"";position:absolute;inset:20px;border:1px solid rgba(255,255,255,.65);border-radius:160px 160px 15px 15px}
+.card div{position:relative}.card h3{font:34px Italiana,serif;margin:0 0 8px}.card p{margin:0;font-size:13px}
+.band{background:var(--plum);color:#fff;text-align:center}.band h2{font-size:clamp(45px,6vw,80px);max-width:900px;margin:0 auto 25px}.band p{opacity:.8}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:60px}.step span{font:50px Italiana,serif;color:var(--rose)}.step h3{font:24px Italiana,serif}
+.cta{text-align:center;background:linear-gradient(145deg,#f6dfdf,#fff9ef)}.cta h2{font-size:clamp(48px,7vw,90px);margin:0 auto 25px;max-width:900px}
+footer{padding:55px 7vw;background:var(--ink);color:white;display:flex;justify-content:space-between;gap:30px}.footbrand{font:38px Italiana,serif}
+@media(max-width:750px){.links a:not(.pill){display:none}.cards,.steps{grid-template-columns:1fr}.card{min-height:380px}section{padding:80px 7vw}footer{display:block}.footbrand{margin-bottom:25px}}
+</style>
+</head>
+<body>
+<nav><a class="brand" href="index.html">pop <i>duo</i></a><div class="links"><a href="#servizi">Servizi</a><a href="contatti.html">Contatti</a><a class="pill" href="prenota.html">Scegli una data</a></div></nav>
+<header class="hero"><span class="float f1"></span><span class="float f2"></span><span class="float f3"></span>
+<div class="hero-inner"><div class="kicker">balloon • backdrop • rental</div><h1>Make it<br><span class="script">pop.</span></h1><p>Allestimenti sognanti per celebrare le persone e i momenti che ami. Balloon decor, backdrop e dettagli creati con cura.</p>
+<div class="actions"><a class="btn" href="prenota.html">Scegli la tua data</a><a class="btn alt" href="contatti.html">Contattaci</a></div></div></header>
+<section id="servizi"><div class="intro"><div class="kicker">what we create</div><h2>Piccoli dettagli.<br>Grandi momenti.</h2><p>[Inserisci qui una breve frase su Pop Duo e sul vostro stile.]</p></div>
+<div class="cards"><div class="card"><div><h3>Balloon Decor</h3><p>[Descrizione]</p></div></div><div class="card"><div><h3>Backdrop Rental</h3><p>[Descrizione]</p></div></div><div class="card"><div><h3>Event Styling</h3><p>[Descrizione]</p></div></div></div></section>
+<section class="band"><div class="kicker" style="color:#efd6d4">family owned</div><h2>Due persone, tante idee, un motivo per festeggiare.</h2><p>[Qui potrai raccontare la storia di Pop Duo.]</p></section>
+<section><div class="intro"><div class="kicker">easy as 1 • 2 • 3</div><h2>Dal sogno alla festa.</h2></div><div class="steps"><div class="step"><span>01</span><h3>Scegli la data</h3><p>Apri il calendario e indicaci quando ti serve il rental.</p></div><div class="step"><span>02</span><h3>Raccontaci l'idea</h3><p>Evento, colori, stile e ciò che vorresti noleggiare.</p></div><div class="step"><span>03</span><h3>Let's pop!</h3><p>Riceverai conferma e dettagli direttamente da noi.</p></div></div></section>
+<section class="cta"><div class="kicker">your date awaits</div><h2>Hai già una data in mente?</h2><a class="btn" href="prenota.html">Apri il calendario</a></section>
+<footer><div><div class="footbrand">pop duo</div><small>Balloon & Backdrop Rental</small></div><div><a href="contatti.html">Contatti</a> &nbsp; • &nbsp; <a href="prenota.html">Richiedi una data</a><br><small>Instagram: [@username] · [Zona]</small></div></footer>
+</body></html>
