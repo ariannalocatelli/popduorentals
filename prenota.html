@@ -1,12 +1,102 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scegli una data — Pop Duo</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet"><style>
-*{box-sizing:border-box}body{margin:0;background:#f7e9e6;color:#493a3d;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}nav{padding:28px 7vw;display:flex;justify-content:space-between}.brand{font:32px Italiana,serif}.wrap{max-width:1050px;margin:auto;padding:50px 7vw 100px;text-align:center}.k{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#a96f72}h1{font:clamp(52px,8vw,95px)/1 Italiana,serif;margin:15px 0}.lead{max-width:600px;margin:0 auto 45px}.panel{background:#fffaf5;border-radius:38px;padding:45px;text-align:left;box-shadow:0 25px 70px #6a4c5815}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px}input,select,textarea{width:100%;border:1px solid #d9c8c3;background:white;border-radius:14px;padding:15px;font:inherit;color:#493a3d}textarea{min-height:120px;resize:vertical}.full{grid-column:1/-1}.btn{border:0;background:#493a3d;color:white;border-radius:99px;padding:15px 25px;text-transform:uppercase;letter-spacing:1.5px;cursor:pointer}.note{font-size:12px;opacity:.7;margin-top:18px}@media(max-width:650px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.panel{padding:25px}}</style></head>
-<body><nav><a class="brand" href="index.html">pop duo</a><a href="index.html">← Home</a></nav><div class="wrap"><div class="k">save your date</div><h1>Quando festeggiamo?</h1><p class="lead">Scegli la data che ti interessa e raccontaci brevemente cosa stai cercando. La richiesta non conferma automaticamente la prenotazione.</p>
-<div class="panel"><form action="#" method="post"><div class="grid">
-<div><label for="date">Data dell'evento</label><input id="date" name="date" type="date" required></div>
-<div><label for="event">Tipo di evento</label><select id="event" name="event"><option>Seleziona...</option><option>Compleanno</option><option>Baby shower</option><option>Battesimo</option><option>Matrimonio</option><option>Evento aziendale</option><option>Altro</option></select></div>
-<div><label for="name">Nome</label><input id="name" name="name" placeholder="Il tuo nome" required></div>
-<div><label for="contact">Email / telefono</label><input id="contact" name="contact" placeholder="Come possiamo contattarti?" required></div>
-<div class="full"><label for="details">Cosa ti piacerebbe?</label><textarea id="details" name="details" placeholder="Backdrop, palloncini, colori, tema, location..."></textarea></div>
-<div class="full"><button class="btn" type="submit">Invia richiesta</button><p class="note">⚠️ Prima della pubblicazione: collega questo modulo a un servizio form o al tuo sistema di prenotazione. Su GitHub Pages, da solo, il pulsante non può inviare i dati.</p></div>
-</div></form></div></div></body></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prenota | Pop Duo</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:#fff8f5;color:#402c38}
+    nav{padding:22px 6%;display:flex;justify-content:space-between;align-items:center}
+    nav a{color:#402c38;text-decoration:none;margin-left:18px}
+    .logo{font-family:Georgia,serif;font-size:28px;font-weight:bold}
+    main{max-width:760px;margin:35px auto 80px;padding:0 22px}
+    h1{font-family:Georgia,serif;font-size:clamp(42px,8vw,72px);margin-bottom:12px}
+    .intro{font-size:18px;line-height:1.6;margin-bottom:30px}
+    form{background:white;padding:30px;border-radius:28px;box-shadow:0 12px 40px rgba(70,40,55,.08)}
+    label{display:block;font-weight:bold;margin:18px 0 7px}
+    input,select,textarea{width:100%;padding:14px;border:1px solid #ddced3;border-radius:14px;font:inherit;background:#fff}
+    textarea{min-height:130px;resize:vertical}
+    button{width:100%;margin-top:25px;padding:16px;border:0;border-radius:999px;background:#402c38;color:white;font-size:17px;font-weight:bold;cursor:pointer}
+    button:hover{opacity:.9}
+    .note{text-align:center;font-size:14px;margin-top:16px;opacity:.75}
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="index.html">pop duo</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Quando facciamo pop? 🎈</h1>
+    <p class="intro">Scegli la data del tuo evento e raccontaci cosa hai in mente. Cliccando su “Invia richiesta” si aprirà WhatsApp con il messaggio già pronto.</p>
+
+    <form id="bookingForm">
+      <label for="date">Data dell'evento</label>
+      <input type="date" id="date" required>
+
+      <label for="event">Tipo di evento</label>
+      <select id="event" required>
+        <option value="">Seleziona...</option>
+        <option>Compleanno</option>
+        <option>Battesimo</option>
+        <option>Baby shower</option>
+        <option>Gender reveal</option>
+        <option>Matrimonio</option>
+        <option>Evento aziendale</option>
+        <option>Altro</option>
+      </select>
+
+      <label for="name">Nome</label>
+      <input type="text" id="name" placeholder="Il tuo nome" required>
+
+      <label for="contact">Telefono o email</label>
+      <input type="text" id="contact" placeholder="Come possiamo ricontattarti?" required>
+
+      <label for="details">Raccontaci la tua idea</label>
+      <textarea id="details" placeholder="Colori, tema, backdrop, palloncini, luogo dell'evento..."></textarea>
+
+      <button type="submit">Invia richiesta su WhatsApp ✨</button>
+      <div class="note">L'invio della richiesta non conferma automaticamente la disponibilità.</div>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const phone = '393482488384';
+      const dateValue = document.getElementById('date').value;
+      const eventType = document.getElementById('event').value;
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const details = document.getElementById('details').value || 'Nessun dettaglio aggiuntivo';
+
+      const dateParts = dateValue.split('-');
+      const formattedDate = dateParts.length === 3
+        ? `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`
+        : dateValue;
+
+      const message =
+`Ciao Pop Duo! 🎈
+
+Vorrei richiedere disponibilità per un rental.
+
+📅 Data: ${formattedDate}
+🎉 Evento: ${eventType}
+👤 Nome: ${name}
+📞 Contatto: ${contact}
+💭 Dettagli: ${details}
+
+Grazie! ✨`;
+
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
